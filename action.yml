@@ -1,0 +1,16 @@
+name: 'Standard Version'
+description: 'Calculate new version based on Conventional Commits, update CHANGELOG and create new git tag'
+inputs:
+  releaseAs:
+    description: 'Release as major|minor|patch'
+    required: false
+    default: 'minor'
+  prerelease:
+    description: 'Pre-release version alpha|beta|...'
+    required: false
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: tag
+  color: purple
