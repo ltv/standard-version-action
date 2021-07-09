@@ -23,9 +23,10 @@ async function run() {
       options.prerelease = prerelease
     }
 
-    if (fs.existsSync('.versionrc.js')) {
-      core.g
-      const versionOpts = __nccwpck_require__(6544)(path.resolve(process.env.GITHUB_WORKSPACE, '.versionrc.js'))
+    const versionRCPath = path.resolve(process.env.GITHUB_WORKSPACE, '.versionrc.js')
+    if (fs.existsSync(versionRCPath)) {
+      core.info(`Found version configuration file at ${versionRCPath}`)
+      const versionOpts = require(versionRCPath)
       options = Object.assign(options, versionOpts)
     }
 
@@ -58121,21 +58122,6 @@ module.exports = JSON.parse("[\"0BSD\",\"AAL\",\"ADSL\",\"AFL-1.1\",\"AFL-1.2\",
 
 /***/ }),
 
-/***/ 6544:
-/***/ ((module) => {
-
-function webpackEmptyContext(req) {
-	var e = new Error("Cannot find module '" + req + "'");
-	e.code = 'MODULE_NOT_FOUND';
-	throw e;
-}
-webpackEmptyContext.keys = () => [];
-webpackEmptyContext.resolve = webpackEmptyContext;
-webpackEmptyContext.id = 6544;
-module.exports = webpackEmptyContext;
-
-/***/ }),
-
 /***/ 2357:
 /***/ ((module) => {
 
@@ -58275,11 +58261,6 @@ module.exports = require("util");;
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__nccwpck_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	(() => {
 /******/ 		__nccwpck_require__.nmd = (module) => {

@@ -16,9 +16,10 @@ async function run() {
       options.prerelease = prerelease
     }
 
-    if (fs.existsSync('.versionrc.js')) {
-      core.g
-      const versionOpts = require(path.resolve(process.env.GITHUB_WORKSPACE, '.versionrc.js'))
+    const versionRCPath = path.resolve(process.env.GITHUB_WORKSPACE, '.versionrc.js')
+    if (fs.existsSync(versionRCPath)) {
+      core.info(`Found version configuration file at ${versionRCPath}`)
+      const versionOpts = require(versionRCPath)
       options = Object.assign(options, versionOpts)
     }
 
