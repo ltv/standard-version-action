@@ -1,4 +1,4 @@
-name: 'Standard Version'
+name: 'Standard Version NodeJS'
 description: 'Calculate new version based on Conventional Commits, update CHANGELOG and create new git tag'
 inputs:
   releaseAs:
