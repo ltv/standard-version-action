@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.7.0 (2021-07-09)
+
+
+### Bug Fixes
+
+* **versionrc:** couldn't resolve .versionrc.js ([2ec8340](https://github.com/ltv/standard-version-action/commit/2ec8340e0fc772d84d89ba6f76fbcfed687ed82e))
+
 ## 1.6.0 (2021-07-09)
 
 
