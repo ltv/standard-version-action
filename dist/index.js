@@ -6,6 +6,8 @@ require('./sourcemap-register.js');module.exports =
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
 
 const core = __nccwpck_require__(2186)
+const fs = __nccwpck_require__(5747)
+const path = __nccwpck_require__(5622)
 const standardVersion = __nccwpck_require__(7217)
 
 async function run() {
@@ -13,12 +15,17 @@ async function run() {
     const releaseAs = core.getInput('releaseAs')
     core.info(`Release as: ${releaseAs}`)
 
-    const options = { releaseAs }
+    let options = { releaseAs }
 
     const prerelease = core.getInput('prerelease')
     if (prerelease) {
       core.info(`Pre release: ${prerelease}`)
       options.prerelease = prerelease
+    }
+
+    if (fs.existsSync('.versionrc.js')) {
+      const versionOpts = __nccwpck_require__(6544)(path.resolve(__dirname, '.versionrc.js'))
+      options = Object.assign(options, versionOpts)
     }
 
     await standardVersion(options)
@@ -58113,6 +58120,21 @@ module.exports = JSON.parse("[\"0BSD\",\"AAL\",\"ADSL\",\"AFL-1.1\",\"AFL-1.2\",
 
 /***/ }),
 
+/***/ 6544:
+/***/ ((module) => {
+
+function webpackEmptyContext(req) {
+	var e = new Error("Cannot find module '" + req + "'");
+	e.code = 'MODULE_NOT_FOUND';
+	throw e;
+}
+webpackEmptyContext.keys = () => [];
+webpackEmptyContext.resolve = webpackEmptyContext;
+webpackEmptyContext.id = 6544;
+module.exports = webpackEmptyContext;
+
+/***/ }),
+
 /***/ 2357:
 /***/ ((module) => {
 
@@ -58252,6 +58274,11 @@ module.exports = require("util");;
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__nccwpck_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	(() => {
 /******/ 		__nccwpck_require__.nmd = (module) => {

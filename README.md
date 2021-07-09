@@ -4,7 +4,7 @@ This [Github Action][] calculates the new version based on [Conventional Commits
 
 ## Inputs
 
-If you want to change a configuration, create a [versionrc file][].
+If you want to change a configuration, create a `.versionrc.js` file. More detail: [versionrc file][]
 
 ## Example usage
 
