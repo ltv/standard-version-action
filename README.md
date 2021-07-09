@@ -4,7 +4,7 @@ This [Github Action][] calculates the new version based on [Conventional Commits
 
 ## Inputs
 
-This action doesn't accept any inputs. If you want to change a configuration, create a [versionrc file][].
+If you want to change a configuration, create a [versionrc file][].
 
 ## Example usage
 
@@ -16,6 +16,21 @@ This action doesn't accept any inputs. If you want to change a configuration, cr
     git config user.email "<>"
 - name: Bump version
   uses: ltv/standard-version@v1
+  with:
+    releaseAs: 'minor'
+```
+
+Inputs:
+
+```yaml
+inputs:
+  releaseAs:
+    description: 'Release as major|minor|patch'
+    required: false
+    default: 'minor'
+  prerelease:
+    description: 'Pre-release version alpha|beta|...'
+    required: false
 ```
 
 [github action]: https://docs.github.com/en/actions
