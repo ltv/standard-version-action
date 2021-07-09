@@ -24,7 +24,8 @@ async function run() {
     }
 
     if (fs.existsSync('.versionrc.js')) {
-      const versionOpts = __nccwpck_require__(6544)(path.resolve(__dirname, '..', '.versionrc.js'))
+      core.g
+      const versionOpts = __nccwpck_require__(6544)(path.resolve(process.env.GITHUB_WORKSPACE, '.versionrc.js'))
       options = Object.assign(options, versionOpts)
     }
 

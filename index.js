@@ -17,7 +17,8 @@ async function run() {
     }
 
     if (fs.existsSync('.versionrc.js')) {
-      const versionOpts = require(path.resolve(__dirname, '..', '.versionrc.js'))
+      core.g
+      const versionOpts = require(path.resolve(process.env.GITHUB_WORKSPACE, '.versionrc.js'))
       options = Object.assign(options, versionOpts)
     }
 
