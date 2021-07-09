@@ -24,7 +24,7 @@ async function run() {
     }
 
     if (fs.existsSync('.versionrc.js')) {
-      const versionOpts = __nccwpck_require__(6544)(path.resolve(__dirname, '.versionrc.js'))
+      const versionOpts = __nccwpck_require__(6544)(path.resolve(__dirname, '..', '.versionrc.js'))
       options = Object.assign(options, versionOpts)
     }
 

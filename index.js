@@ -17,7 +17,7 @@ async function run() {
     }
 
     if (fs.existsSync('.versionrc.js')) {
-      const versionOpts = require(path.resolve(__dirname, '.versionrc.js'))
+      const versionOpts = require(path.resolve(__dirname, '..', '.versionrc.js'))
       options = Object.assign(options, versionOpts)
     }
 
