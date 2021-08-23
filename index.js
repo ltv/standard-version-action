@@ -24,6 +24,8 @@ async function run() {
     }
 
     await standardVersion(options)
+    const version = require('./package.json').version
+    core.setOutput('version', version)
   } catch (error) {
     core.setFailed(error.stack)
   }

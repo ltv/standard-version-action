@@ -1,5 +1,5 @@
 {
-  "version": "1.8.0",
+  "version": "2.3.0",
   "private": true,
   "scripts": {
     "lint": "eslint .",
@@ -13,11 +13,11 @@
     "JavaScript"
   ],
   "dependencies": {
-    "@actions/core": "^1.2.5",
+    "@actions/core": "^1.5.0",
     "standard-version": "^9.3.1"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.28.6",
+    "@vercel/ncc": "^0.29.2",
     "eslint": "^7.4.0",
     "husky": "^7.0.1"
   }

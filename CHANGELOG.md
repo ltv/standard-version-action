@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 2.3.0 (2021-08-23)
+
+## 2.2.0 (2021-08-23)
+
+## 2.1.0 (2021-08-23)
+
+## [2.0.0](https://github.com/ltv/standard-version-action/compare/v1.8.0...v2.0.0) (2021-08-23)
+
+
+### Features
+
+* **core:** setOutput version after releasing ([9f4015d](https://github.com/ltv/standard-version-action/commit/9f4015dadbac29e5c2a056eb7abd6d2439366758))
+
 ## 1.8.0 (2021-07-09)
 
 
