@@ -17,8 +17,8 @@
     "standard-version": "^9.3.0"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.28.6",
-    "eslint": "^7.32.0",
+    "@vercel/ncc": "^0.29.2",
+    "eslint": "^7.4.0",
     "husky": "^7.0.1"
   }
 }
