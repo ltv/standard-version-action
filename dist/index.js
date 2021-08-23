@@ -58128,7 +58128,7 @@ module.exports = JSON.parse("[\"0BSD\",\"AAL\",\"ADSL\",\"AFL-1.1\",\"AFL-1.2\",
 /***/ ((module) => {
 
 "use strict";
-module.exports = {"i8":"1.8.0"};
+module.exports = {"i8":"2.0.0"};
 
 /***/ }),
 
