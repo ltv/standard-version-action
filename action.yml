@@ -8,6 +8,9 @@ inputs:
   prerelease:
     description: 'Pre-release version alpha|beta|...'
     required: false
+outputs:
+  version:
+    description: 'New version number`
 runs:
   using: 'node12'
   main: 'dist/index.js'
